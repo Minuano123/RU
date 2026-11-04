@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio RU UEMA - Semanal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #003366;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        .tabs {
+            display: flex;
+            background-color: #e9ecef;
+            border-bottom: 1px solid #ccc;
+            overflow-x: auto;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 12px 8px;
+            border: none;
+            background: none;
+            font-weight: bold;
+            font-size: 14px;
+            color: #555;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .tab-btn.active {
+            background-color: #ffffff;
+            color: #003366;
+            border-bottom: 3px solid #003366;
+        }
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h2 {
+            color: #003366;
+            font-size: 18px;
+            margin-top: 0;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            font-size: 15px;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+        .holiday {
+            font-style: italic;
+            color: #d9534f;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Restaurante Universitário - UEMA</h1>
+            <p>Cardápio Semanal (03 a 06 de Novembro de 2026)</p>
+        </div>
+
+        <!-- Menu de Abas -->
+        <div class="tabs">
+            <button class="tab-btn" onclick="selectTab('segunda')">Seg (03/11)</button>
+            <button class="tab-btn active" onclick="selectTab('terca')">Ter (04/11)</button>
+            <button class="tab-btn" onclick="selectTab('quarta')">Qua (05/11)</button>
+            <button class="tab-btn" onclick="selectTab('quinta')">Qui (06/11)</button>
+            <button class="tab-btn" onclick="selectTab('sexta')">Sex (07/11)</button>
+        </div>
+
+        <!-- SEGUNDA-FEIRA -->
+        <div id="segunda" class="tab-content">
+            <div class="section">
+                <p class="holiday">Feriado - Sem atendimento</p>
+            </div>
+        </div>
+
+        <!-- TERÇA-FEIRA -->
+        <div id="terca" class="tab-content active">
+            <div class="section">
+                <h2>Almoço (11h30 às 13h30)</h2>
+                <ul>
+                    <li><span class="label">Proteína 1:</span> Carne moída à moda da casa</li>
+                    <li><span class="label">Proteína 2:</span> Peito de frango ao molho do maracujá</li>
+                    <li><span class="label">Proteína 3:</span> Bife ao molho escuro</li>
+                    <li><span class="label">Proteína 4 (Vegetariano):</span> Torta de proteína de soja</li>
+                    <li><span class="label">Acompanhamentos / Outros:</span> Salada, Farofa, Arroz temperado, Feijão e Fruta</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Jantar (18h00 às 19h30)</h2>
+                <ul>
+                    <li><span class="label">Proteína 1:</span> Frango ao forno</li>
+                    <li><span class="label">Proteína 2:</span> Panqueca de carne</li>
+                    <li><span class="label">Proteína 3:</span> Picadinho de frango com legumes</li>
+                    <li><span class="label">Proteína 4 (Vegetariano):</span> Panqueca vegetariana</li>
+                    <li><span class="label">Acompanhamentos / Outros:</span> Salada, Farofa, Arroz branco, Feijão e Fruta</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- QUARTA-FEIRA -->
+        <div id="quarta" class="tab-content">
+            <div class="section">
+                <h2>Almoço (11h30 às 13h30)</h2>
+                <ul>
+                    <li><span class="label">Proteína 1:</span> Panqueca de carne</li>
+                    <li><span class="label">Proteína 2:</span> Frango em cubos com ovos e cebolinha de cabeça</li>
+                    <li><span class="label">Proteína 3:</span> Bisteca suína na chapa</li>
+                    <li><span class="label">Proteína 4 (Vegetariano):</span> Panqueca vegetariana</li>
+                    <li><span class="label">Acompanhamentos / Outros:</span> Salada, Farofa, Baião de dois e Fruta</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Jantar (18h00 às 19h30)</h2>
+                <ul>
+                    <li><span class="label">Proteína 1:</span> Fígado acebolado</li>
+                    <li><span class="label">Proteína 2:</span> Frango ao molho caipira</li>
+                    <li><span class="label">Proteína 3:</span> Bife acebolado</li>
+                    <li><span class="label">Proteína 4 (Vegetariano):</span> Macarronada de proteína de soja</li>
+                    <li><span class="label">Acompanhamentos / Outros:</span> Salada, Macarrão ao alho e óleo, Arroz branco, Feijão e Fruta</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- QUINTA-FEIRA -->
+        <div id="quinta" class="tab-content">
+            <div class="section">
+                <h2>Almoço (11h30 às 13h30)</h2>
+                <ul>
+                    <li><span class="label">Proteína 1:</span> Cozidão maranhense</li>
+                    <li><span class="label">Proteína 2:</span> Frango ao molho caipira</li>
+                    <li><span class="label">Proteína 3:</span> Bife de panela com batatas</li>
+                    <li><span class="label">Proteína 4 (Vegetariano):</span> Macarronada de proteína de soja</li>
+                    <li><span class="label">Acompanhamentos / Outros:</span> Salada, Macarrão à moda da casa, Arroz branco, Feijão e Fruta</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Jantar (18h00 às 19h30)</h2>
+                <ul>
+                    <li><span class="label">Proteína 1:</span> Bisteca suína na chapa</li>
+                    <li><span class="label">Proteína 2:</span> Peito de frango grelhado</li>
+                    <li><span class="label">Proteína 3:</span> Carne moída na chapa com ovos e legumes</li>
+                    <li><span class="label">Proteína 4 (Vegetariano):</span> Proteína de soja com legumes</li>
+                    <li><span class="label">Acompanhamentos / Outros:</span> Salada, Farofa, Arroz branco, Feijão e Fruta</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SEXTA-FEIRA -->
+        <div id="sexta" class="tab-content">
+            <div class="section">
+                <h2>Almoço (11h30 às 13h30)</h2>
+                <ul>
+                    <li><span class="label">Proteína 1:</span> Feijoada</li>
+                    <li><span class="label">Proteína 2:</span> Almôndegas ao molho</li>
+                    <li><span class="label">Proteína 3:</span> Peito de frango acebolado</li>
+                    <li><span class="label">Proteína 4 (Vegetariano):</span> Feijoada vegetariana</li>
+                    <li><span class="label">Acompanhamentos / Outros:</span> Salada, Farofa, Arroz branco, Feijão e Fruta</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Jantar (18h00 às 19h30)</h2>
+                <ul>
+                    <li><span class="label">Proteína 1:</span> Peixe frito</li>
+                    <li><span class="label">Proteína 2:</span> Bife de panela com batatas</li>
+                    <li><span class="label">Proteína 3:</span> Peito de frango ao molho do maracujá</li>
+                    <li><span class="label">Proteína 4 (Vegetariano):</span> Grão-de-bico com legumes</li>
+                    <li><span class="label">Acompanhamentos / Outros:</span> Salada, Farofa, Arroz temperado, Feijão e Fruta</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>As opções de proteína são oferecidas para escolha de uma delas. Cardápio sujeito a alterações.</p>
+        </div>
+    </div>
+
+    <script>
+        function selectTab(dayId) {
+            // Oculta todos os conteúdos
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Remove o destaque dos botões
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Mostra o dia selecionado e destaca o botão
+            document.getElementById(dayId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
